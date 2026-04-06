@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dominik Preiss – KI, die im Arbeitsalltag funktioniert</title>
+<meta name="description" content="Ich helfe Unternehmen und Teams dabei, KI so einzusetzen, dass echte Prozesse besser werden. Vorträge, Workshops, Pilotprojekte – aus der Praxis, nicht aus dem Lehrbuch.">
+<meta name="author" content="Dominik Preiss">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://dominikpreiss.de/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Dominik Preiss – KI, die im Arbeitsalltag funktioniert">
+<meta property="og:description" content="KI-Beratung für den Mittelstand. Vorträge, Workshops, Pilotprojekte – aus der Praxis, nicht aus dem Lehrbuch.">
+<meta property="og:url" content="https://dominikpreiss.de/">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="Dominik Preiss – 57 Consulting">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Dominik Preiss – KI, die im Arbeitsalltag funktioniert">
+<meta name="twitter:description" content="KI-Beratung für den Mittelstand. Vorträge, Workshops, Pilotprojekte – aus der Praxis, nicht aus dem Lehrbuch.">
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Instrument+Sans:wght@400;500;600;700&display=swap" as="style">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Dominik Preiss – 57 Consulting",
+  "description": "KI-Beratung für den Mittelstand: Vorträge, Workshops, Pilotprojekte.",
+  "url": "https://dominikpreiss.de",
+  "areaServed": {
+    "@type": "GeoCircle",
+    "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 50.87, "longitude": 8.02 },
+    "geoRadius": "100000"
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Dominik Preiss",
+    "jobTitle": "KI-Berater & Lead Innovation",
+    "sameAs": "https://www.linkedin.com/in/dominikpreiss"
+  },
+  "serviceType": ["KI-Beratung", "Workshops", "Vorträge", "Pilotprojekte"],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "hello@57consulting.de",
+    "contactType": "customer service"
+  }
+}
+</script>
+
+<style>
+  :root {
+    --bg-start: #f8f1e8;
+    --bg-end: #efe3d4;
+    --ink: #1f1f1d;
+    --muted: rgba(31,31,29,0.72);
+    --light: rgba(31,31,29,0.50);
+    --copper: #b65c3a;
+    --copper-soft: rgba(182,92,58,0.16);
+    --copper-glow: rgba(182,92,58,0.10);
+    --panel: rgba(255,250,244,0.76);
+    --card: rgba(255,255,255,0.70);
+    --sand: #f4efe7;
+    --border: rgba(0,0,0,0.10);
+    --border-light: rgba(0,0,0,0.06);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Instrument Sans', system-ui, -apple-system, sans-serif;
+    color: var(--ink);
+    line-height: 1.7;
+    background:
+      radial-gradient(circle at top left, rgba(182,92,58,0.12), transparent 24%),
+      radial-gradient(circle at 80% 20%, rgba(112,128,144,0.10), transparent 24%),
+      linear-gradient(180deg, var(--bg-start) 0%, var(--bg-end) 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection { background: var(--copper-soft); }
+  a { color: inherit; text-decoration: none; }
+  .display { font-family: 'Fraunces', Georgia, serif; }
+  .label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    color: var(--copper);
+    font-weight: 500;
+  }
+  .wrap { max-width: 72rem; margin: 0 auto; padding: 0 1.5rem; }
+  @media (min-width: 768px) { .wrap { padding: 0 2.5rem; } }
+
+  /* ── Header ── */
+  .site-header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 2.5rem 0 1.5rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 4rem;
+  }
+  .site-header .brand-name { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.28em; color: var(--copper); font-weight: 500; }
+  .site-header .brand-sub { margin-top: 0.4rem; font-size: 0.875rem; color: var(--muted); }
+  .site-header nav { display: none; gap: 1.5rem; font-size: 0.875rem; color: var(--muted); }
+  .site-header nav a { transition: color 0.2s; }
+  .site-header nav a:hover { color: var(--ink); }
+  @media (min-width: 768px) { .site-header nav { display: flex; } }
+
+  /* ── Mobile Menu ── */
+  .menu-toggle {
+    display: flex; align-items: center; justify-content: center;
+    width: 2.5rem; height: 2.5rem;
+    background: none; border: 1px solid var(--border); border-radius: 0.5rem;
+    cursor: pointer; color: var(--ink);
+  }
+  .menu-toggle svg { width: 1.25rem; height: 1.25rem; }
+  @media (min-width: 768px) { .menu-toggle { display: none; } }
+  .mobile-nav {
+    display: none;
+    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(248,241,232,0.97); backdrop-filter: blur(20px);
+    z-index: 100;
+    flex-direction: column; align-items: center; justify-content: center; gap: 2rem;
+  }
+  .mobile-nav.open { display: flex; }
+  .mobile-nav a {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.8rem; color: var(--ink);
+    transition: color 0.2s;
+  }
+  .mobile-nav a:hover { color: var(--copper); }
+  .mobile-nav .close-btn {
+    position: absolute; top: 2rem; right: 1.5rem;
+    width: 2.5rem; height: 2.5rem;
+    background: none; border: 1px solid var(--border); border-radius: 0.5rem;
+    cursor: pointer; color: var(--ink);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .mobile-nav .close-btn svg { width: 1.25rem; height: 1.25rem; }
+
+  /* ── Hero ── */
+  .hero { display: grid; gap: 2.5rem; align-items: end; }
+  @media (min-width: 1024px) { .hero { grid-template-columns: 1.3fr 0.7fr; } }
+  .hero h1 { font-size: clamp(2.6rem, 6vw, 4.5rem); line-height: 1.1; color: var(--ink); max-width: 56rem; }
+  .hero .intro { margin-top: 1.5rem; font-size: 1.125rem; line-height: 1.8; color: var(--muted); max-width: 38rem; }
+  .hero .cta-row { margin-top: 2rem; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    padding: 0.9rem 1.8rem; border-radius: 2rem;
+    background: var(--ink); color: var(--sand);
+    font-size: 0.95rem; font-weight: 500;
+    transition: background 0.2s, transform 0.15s;
+    border: none; cursor: pointer;
+  }
+  .btn-primary:hover { background: #333; transform: translateY(-1px); }
+  .btn-secondary {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    padding: 0.9rem 1.8rem; border-radius: 2rem;
+    background: transparent; color: var(--ink);
+    font-size: 0.95rem; font-weight: 500;
+    border: 1px solid var(--border);
+    transition: border-color 0.2s, background 0.2s;
+    cursor: pointer;
+  }
+  .btn-secondary:hover { border-color: var(--copper); background: var(--copper-soft); }
+  .formats-card {
+    position: relative; overflow: hidden;
+    border-radius: 2rem; border: 1px solid var(--border);
+    background: rgba(255,255,255,0.60); backdrop-filter: blur(12px);
+    padding: 1.5rem; box-shadow: 0 25px 90px rgba(0,0,0,0.06);
+  }
+  .formats-card .glow { position: absolute; right: 0; top: 0; width: 7rem; height: 7rem; border-radius: 50%; background: var(--copper-glow); filter: blur(48px); }
+  .formats-card .card-label { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.25em; color: var(--light); }
+  .formats-card ul { list-style: none; margin-top: 1.25rem; }
+  .formats-card li { padding: 0.75rem 0; border-bottom: 1px solid var(--border-light); font-size: 1rem; color: var(--ink); }
+  .formats-card li:last-child { border-bottom: none; }
+
+  /* ── These ── */
+  .these {
+    margin-top: 5rem;
+    display: grid; gap: 1.5rem;
+    border-radius: 2.2rem; border: 1px solid var(--border);
+    background: rgba(255,250,244,0.80); padding: 2rem;
+  }
+  @media (min-width: 768px) { .these { grid-template-columns: 0.9fr 1.1fr; padding: 2.5rem; } }
+  .these h2 { font-size: clamp(1.8rem, 4vw, 3rem); line-height: 1.15; color: var(--ink); margin-top: 1rem; }
+  .these .subtext { margin-top: 1rem; font-size: 1rem; line-height: 1.7; color: var(--light); }
+  .pillars { display: grid; gap: 1rem; }
+  @media (min-width: 768px) { .pillars { grid-template-columns: repeat(3, 1fr); } }
+  .pillar {
+    border-radius: 1.6rem; border: 1px solid var(--border);
+    background: var(--card); padding: 1.5rem;
+  }
+  .pillar .pillar-title { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.22em; color: var(--copper); font-weight: 500; }
+  .pillar p { margin-top: 1rem; font-size: 0.95rem; line-height: 1.7; color: var(--muted); }
+
+  /* ── Sections shared ── */
+  .section { margin-top: 6rem; }
+  .section-grid { display: grid; gap: 2.5rem; }
+  @media (min-width: 1024px) { .section-grid { grid-template-columns: 0.65fr 1.35fr; } }
+  @media (min-width: 1024px) { .section-grid.narrow { grid-template-columns: 0.75fr 1.25fr; } }
+  .section h2 { font-size: clamp(1.8rem, 4vw, 3rem); line-height: 1.15; color: var(--ink); margin-top: 1rem; }
+
+  /* ── Cards ── */
+  .card-main {
+    border-radius: 1.8rem; border: 1px solid var(--border);
+    background: rgba(255,250,244,1); padding: 2rem;
+  }
+  .card-main h3 { font-size: 1.5rem; font-weight: 500; color: var(--ink); }
+  .card-main > p { margin-top: 1rem; font-size: 1rem; line-height: 1.8; color: var(--muted); max-width: 48rem; }
+  .card-main .results { margin-top: 1.5rem; display: grid; gap: 0.75rem; list-style: none; }
+  @media (min-width: 768px) { .card-main .results { grid-template-columns: 1fr 1fr; } }
+  .card-main .results li { font-size: 0.9rem; line-height: 1.5; color: var(--muted); padding-left: 1.2rem; position: relative; }
+  .card-main .results li::before { content: '\2713'; position: absolute; left: 0; color: var(--copper); font-weight: 600; }
+  .card-main .invest { margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-light); font-size: 0.9rem; color: var(--light); }
+
+  .card-grid { display: grid; gap: 1.25rem; margin-top: 1.5rem; }
+  @media (min-width: 768px) { .card-grid { grid-template-columns: 1fr 1fr; } }
+  .card {
+    border-radius: 1.6rem; border: 1px solid var(--border);
+    background: var(--card); padding: 1.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(0,0,0,0.06); }
+  .card h3 { font-size: 1.2rem; color: var(--ink); font-weight: 500; }
+  .card p { margin-top: 0.75rem; font-size: 0.95rem; line-height: 1.7; color: var(--muted); }
+  .card .price { margin-top: 0.75rem; font-size: 0.85rem; color: var(--copper); font-weight: 500; }
+
+  /* ── Praxis ── */
+  .praxis-intro { margin-top: 1rem; font-size: 1rem; line-height: 1.8; color: var(--light); max-width: 48rem; }
+  .praxis-card {
+    border-radius: 1.6rem; border: 1px solid var(--border);
+    background: rgba(255,250,244,0.60); padding: 1.5rem;
+    transition: transform 0.2s;
+  }
+  .praxis-card:hover { transform: translateY(-2px); }
+  .praxis-card .praxis-title { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--copper); font-weight: 500; }
+  .praxis-card p { margin-top: 0.75rem; font-size: 0.95rem; line-height: 1.7; color: var(--muted); }
+
+  /* ── Profil ── */
+  .profil-text { font-size: 1.1rem; line-height: 1.8; color: var(--muted); }
+  .profil-box {
+    margin-top: 2rem; border-radius: 1.8rem; border: 1px solid var(--border);
+    background: var(--card); padding: 2rem;
+  }
+  .profil-box .col-label { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.25em; color: var(--light); font-weight: 500; }
+  .profil-box ul { list-style: none; margin-top: 1.25rem; }
+  .profil-box li { padding: 0.6rem 0; font-size: 0.95rem; line-height: 1.6; color: var(--ink); }
+  .profil-cols { display: grid; gap: 2rem; }
+  @media (min-width: 768px) { .profil-cols { grid-template-columns: 1fr 1fr; } }
+
+  /* ── Kontakt ── */
+  .kontakt {
+    margin-top: 6rem;
+    border-radius: 2rem; border: 1px solid var(--border);
+    background: var(--ink); color: var(--sand);
+    padding: 2.5rem 2rem;
+  }
+  @media (min-width: 768px) { .kontakt { padding: 3rem; } }
+  .kontakt .label { color: #d79a80; }
+  .kontakt h2 { font-size: clamp(1.8rem, 4vw, 3rem); line-height: 1.15; margin-top: 1rem; max-width: 38rem; }
+  .kontakt .links { margin-top: 2rem; display: flex; flex-wrap: wrap; gap: 1rem; }
+  .kontakt .link-btn {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    padding: 0.8rem 1.6rem; border-radius: 2rem;
+    font-size: 0.95rem; font-weight: 500;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .kontakt .link-btn.mail { background: var(--copper); color: #fff; }
+  .kontakt .link-btn.mail:hover { background: #c96a47; transform: translateY(-1px); }
+  .kontakt .link-btn.linkedin { background: rgba(255,255,255,0.12); color: rgba(244,239,231,0.90); border: 1px solid rgba(255,255,255,0.15); }
+  .kontakt .link-btn.linkedin:hover { background: rgba(255,255,255,0.20); transform: translateY(-1px); }
+
+  /* ── Footer ── */
+  .site-footer {
+    margin-top: 4rem; padding: 1.5rem 0 2.5rem;
+    border-top: 1px solid var(--border);
+    display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
+    font-size: 0.85rem; color: var(--light); gap: 1rem;
+  }
+  .site-footer .legal { display: flex; gap: 1.5rem; }
+  .site-footer .legal a { color: var(--light); transition: color 0.2s; }
+  .site-footer .legal a:hover { color: var(--ink); }
+
+  /* ── Animations ── */
+  @media (prefers-reduced-motion: no-preference) {
+    .fade-up {
+      opacity: 0; transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .fade-up { opacity: 1; transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Mobile Navigation Overlay -->
+<div class="mobile-nav" id="mobileNav">
+  <button class="close-btn" onclick="document.getElementById('mobileNav').classList.remove('open')" aria-label="Menü schließen">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+  </button>
+  <a href="#these" onclick="document.getElementById('mobileNav').classList.remove('open')">These</a>
+  <a href="#angebot" onclick="document.getElementById('mobileNav').classList.remove('open')">Angebot</a>
+  <a href="#praxis" onclick="document.getElementById('mobileNav').classList.remove('open')">Praxis</a>
+  <a href="#profil" onclick="document.getElementById('mobileNav').classList.remove('open')">Profil</a>
+  <a href="#kontakt" onclick="document.getElementById('mobileNav').classList.remove('open')">Kontakt</a>
+</div>
+
+<div class="wrap">
+
+  <!-- Header -->
+  <header class="site-header">
+    <div>
+      <div class="brand-name">Dominik Preiss</div>
+      <div class="brand-sub">57 Consulting</div>
+    </div>
+    <nav>
+      <a href="#these">These</a>
+      <a href="#angebot">Angebot</a>
+      <a href="#praxis">Praxis</a>
+      <a href="#profil">Profil</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <button class="menu-toggle" onclick="document.getElementById('mobileNav').classList.add('open')" aria-label="Menü öffnen">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero fade-up">
+    <div>
+      <p class="label">KI-Beratung aus der Praxis</p>
+      <h1 class="display">KI, die im Arbeitsalltag funktioniert&nbsp;&ndash; nicht nur auf der B&uuml;hne.</h1>
+      <p class="intro">Ich helfe Unternehmen und Teams dabei, K&uuml;nstliche Intelligenz so einzusetzen, dass echte Prozesse besser werden. Was ich extern anbiete, habe ich intern bereits gebaut: KI-Strategie, Governance und Enablement f&uuml;r eine Organisation mit rund 80 Beratern und Entwicklern.</p>
+      <div class="cta-row">
+        <a href="#kontakt" class="btn-primary">Gespräch vereinbaren</a>
+        <a href="#angebot" class="btn-secondary">Formate ansehen</a>
+      </div>
+    </div>
+    <div class="formats-card">
+      <div class="glow"></div>
+      <p class="card-label">Formate</p>
+      <ul>
+        <li>Impulsvortr&auml;ge</li>
+        <li>Workshops</li>
+        <li>KI-Realit&auml;tschecks</li>
+        <li>Kleine Pilotprojekte</li>
+        <li>Sparring f&uuml;r Verantwortliche</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- These -->
+  <section class="these fade-up" id="these">
+    <div>
+      <p class="label">Kernthese</p>
+      <h2 class="display">Zwischen Demo-Effekt und echtem Arbeitsalltag liegt eine gro&szlig;e L&uuml;cke.</h2>
+      <p class="subtext">Das liegt selten am Tool. Es liegt daran, dass die &Uuml;bersetzungsarbeit fehlt: Welche Aufgaben lohnen sich? Welches Tool passt wozu? Wie f&auml;ngt ein Team an, ohne in Aktionismus zu verfallen?</p>
+    </div>
+    <div class="pillars">
+      <div class="pillar">
+        <p class="pillar-title">Einordnung</p>
+        <p>Was GPT, Claude und Copilot heute wirklich k&ouml;nnen, wo Grenzen liegen und welche Denkfehler Organisationen vermeiden sollten.</p>
+      </div>
+      <div class="pillar">
+        <p class="pillar-title">Use Cases</p>
+        <p>Konkrete Aufgaben und Prozesse identifizieren, priorisieren und in einen sinnvollen ersten Einstieg &uuml;bersetzen.</p>
+      </div>
+      <div class="pillar">
+        <p class="pillar-title">Enablement</p>
+        <p>Teams und Verantwortliche arbeitsf&auml;hig machen &ndash; mit Workshops, Prompt-Training und Strukturen, die &uuml;ber den ersten Enthusiasmus hinaus tragen.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Angebot -->
+  <section class="section fade-up" id="angebot">
+    <div class="section-grid">
+      <div>
+        <p class="label">Angebot</p>
+        <h2 class="display">Ein klarer Einstieg statt diffuses KI-Interesse.</h2>
+      </div>
+      <div>
+        <div class="card-main">
+          <h3>KI-Realit&auml;tscheck + Use-Case-Workshop</h3>
+          <p>Ein halber bis ganzer Tag, an dem wir gemeinsam Klarheit schaffen: Was kann KI f&uuml;r euer Team konkret leisten? Was nicht? Und womit fangt ihr sinnvoll an?</p>
+          <ul class="results">
+            <li>Ehrliches Bild von GPT, Claude und Copilot</li>
+            <li>3&ndash;5 priorisierte Use Cases f&uuml;r euren Alltag</li>
+            <li>Klare Empfehlung f&uuml;r die n&auml;chsten Schritte</li>
+            <li>Entscheidungsf&auml;higkeit statt diffuses Interesse</li>
+          </ul>
+          <p class="invest">Investition: 1.500 &ndash; 3.000 EUR je nach Umfang</p>
+        </div>
+        <div class="card-grid">
+          <div class="card">
+            <h3>Vortr&auml;ge &amp; Impulse</h3>
+            <p>45&ndash;90 Min praxisnahe Einordnung f&uuml;r Unternehmen, Netzwerke und Veranstaltungen. Keine PowerPoint-Show, sondern Substanz.</p>
+            <p class="price">ab 500 EUR</p>
+          </div>
+          <div class="card">
+            <h3>Workshops</h3>
+            <p>Arbeitsorientierte Formate, in denen Teams nicht &uuml;ber KI reden, sondern mit KI arbeiten. Halber oder ganzer Tag.</p>
+            <p class="price">1.500 &ndash; 3.000 EUR</p>
+          </div>
+          <div class="card">
+            <h3>Pilotprojekte</h3>
+            <p>Ein echter Prozess wird mit KI neu aufgesetzt, getestet und dokumentiert. 2&ndash;4 Wochen, ein konkreter Hebel.</p>
+            <p class="price">Auf Anfrage</p>
+          </div>
+          <div class="card">
+            <h3>Sparring</h3>
+            <p>F&uuml;r Verantwortliche, die einen ehrlichen Gespr&auml;chspartner brauchen &ndash; keinen Verk&auml;ufer.</p>
+            <p class="price">300 &ndash; 500 EUR / Session</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Praxis -->
+  <section class="section fade-up" id="praxis">
+    <p class="label">Aus der Praxis</p>
+    <h2 class="display" style="max-width: 48rem;">Was ich intern gebaut habe &ndash; und was davon &uuml;bertragbar ist.</h2>
+    <p class="praxis-intro">Diese Beispiele stammen aus meiner Arbeit f&uuml;r eine Organisation mit rund 80 Beratern und Entwicklern. Sie lassen sich direkt auf andere Teams und Unternehmen &uuml;bertragen.</p>
+    <div class="card-grid" style="margin-top: 2rem;">
+      <div class="praxis-card">
+        <p class="praxis-title">Meeting-Protokolle</p>
+        <p>Von 30 Min Nacharbeit auf 90 Sekunden strukturierten Output.</p>
+      </div>
+      <div class="praxis-card">
+        <p class="praxis-title">Fachkonzepte aus Notizen</p>
+        <p>Workshop-Mitschriften automatisiert in saubere Ergebnisdokumente verwandeln.</p>
+      </div>
+      <div class="praxis-card">
+        <p class="praxis-title">Angebotsprozesse</p>
+        <p>KI-gest&uuml;tzte Vorrecherche, Dokumentenanalyse und Entwurfsgenerierung.</p>
+      </div>
+      <div class="praxis-card">
+        <p class="praxis-title">Prompt-Bibliotheken</p>
+        <p>Wiederverwendbare, getestete Bausteine f&uuml;r wiederkehrende Teamaufgaben.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Profil -->
+  <section class="section fade-up" id="profil">
+    <div class="section-grid narrow">
+      <div>
+        <p class="label">Profil</p>
+        <h2 class="display">Kein externer KI-Berater, der aus Blogposts zitiert.</h2>
+      </div>
+      <div>
+        <p class="profil-text">Ich baue gerade die KI-Strategie f&uuml;r eine Organisation mit rund 80 Beratern und Entwicklern &ndash; von der KI-Policy &uuml;ber Schulungsformate und Prompt-Bibliotheken bis zum Pilotgruppen-Rollout. Was ich extern anbiete, habe ich intern bereits gebaut, getestet und gegen echte Widerst&auml;nde durchgesetzt.</p>
+        <div class="profil-box">
+          <div class="profil-cols">
+            <div>
+              <p class="col-label">Vortragsthemen</p>
+              <ul>
+                <li>KI im Mittelstand: Vom Demo-Effekt zum echten Arbeitshebel</li>
+                <li>Was GPT, Claude und Copilot wirklich k&ouml;nnen &ndash; und was nicht</li>
+                <li>KI-Einf&uuml;hrung scheitert selten am Tool</li>
+                <li>KI-Governance: Policy, Reifegradmodell, Rollout</li>
+              </ul>
+            </div>
+            <div>
+              <p class="col-label">Hintergrund</p>
+              <ul>
+                <li>KI-Strategie f&uuml;r ~80 Berater &amp; Entwickler &ndash; operativ</li>
+                <li>6+ Jahre IT-Beratung, PM &amp; ERP-Transformation</li>
+                <li>M.Sc. Business Consulting &amp; Digital Management (1,3)</li>
+                <li>Technisch arbeitsf&auml;hig: Prototypen, Multi-AI-Setups</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontakt -->
+  <section class="kontakt fade-up" id="kontakt">
+    <p class="label">Kontakt</p>
+    <h2 class="display">Kein Pitch, kein Verkaufsgespr&auml;ch. 20&nbsp;Minuten, danach wei&szlig;t Du ob es passt.</h2>
+    <div class="links">
+      <a href="mailto:hello@57consulting.de" class="link-btn mail">hello@57consulting.de</a>
+      <a href="https://www.linkedin.com/in/dominikpreiss" target="_blank" rel="noopener" class="link-btn linkedin">LinkedIn</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <span>Dominik Preiss &middot; 57 Consulting</span>
+    <div class="legal">
+      <a href="/impressum.html">Impressum</a>
+      <a href="/datenschutz.html">Datenschutz</a>
+    </div>
+  </footer>
+
+</div>
+
+<!-- Scroll Animations -->
+<script>
+(function() {
+  var targets = document.querySelectorAll('.fade-up');
+  if (!('IntersectionObserver' in window)) {
+    targets.forEach(function(t) { t.classList.add('visible'); });
+    return;
+  }
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  targets.forEach(function(t) { observer.observe(t); });
+})();
+</script>
+
+</body>
+</html>
