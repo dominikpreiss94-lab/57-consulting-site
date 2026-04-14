@@ -3,33 +3,80 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Impressum – Dominik Preiss</title>
+<title>Impressum &ndash; 57 Consulting</title>
 <meta name="robots" content="noindex">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url(/fonts/inter-latin.woff2) format('woff2');
+  }
+  @font-face {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500 700;
+    font-display: swap;
+    src: url(/fonts/space-grotesk-latin.woff2) format('woff2');
+  }
   :root {
-    --bg-start: #f8f1e8; --bg-end: #efe3d4; --ink: #1f1f1d;
-    --muted: rgba(31,31,29,0.72); --copper: #b65c3a; --border: rgba(0,0,0,0.10);
+    --bg: #0b0b0b;
+    --bg-card: #141414;
+    --border: rgba(255,255,255,0.08);
+    --text: #f0f0f0;
+    --text-muted: rgba(240,240,240,0.55);
+    --text-secondary: rgba(240,240,240,0.75);
+    --orange: #e8650a;
+    --orange-soft: rgba(232,101,10,0.12);
+    --white: #ffffff;
   }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
   body {
-    font-family: 'Instrument Sans', system-ui, sans-serif;
-    color: var(--ink); line-height: 1.8;
-    background: linear-gradient(180deg, var(--bg-start) 0%, var(--bg-end) 100%);
-    min-height: 100vh; -webkit-font-smoothing: antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--text);
+    line-height: 1.8;
+    background: var(--bg);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
   }
-  a { color: var(--copper); }
+  ::selection { background: var(--orange-soft); color: var(--white); }
+  a { color: var(--orange); text-decoration: none; transition: color 0.2s; }
+  a:hover { color: var(--white); }
   .wrap { max-width: 48rem; margin: 0 auto; padding: 3rem 1.5rem 4rem; }
-  .back { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.875rem; color: var(--muted); text-decoration: none; margin-bottom: 2rem; }
-  .back:hover { color: var(--ink); }
-  h1 { font-family: 'Fraunces', Georgia, serif; font-size: 2.2rem; line-height: 1.2; margin-bottom: 2rem; }
-  h2 { font-family: 'Fraunces', Georgia, serif; font-size: 1.3rem; margin-top: 2.5rem; margin-bottom: 0.75rem; }
-  p { margin-bottom: 1rem; color: var(--muted); }
-  .placeholder { background: rgba(182,92,58,0.08); border: 1px dashed var(--copper); border-radius: 0.5rem; padding: 0.75rem 1rem; color: var(--copper); font-size: 0.9rem; margin-bottom: 1rem; }
+  @media (min-width: 768px) { .wrap { padding: 3rem 2.5rem 4rem; } }
+  .back {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    font-size: 0.85rem; color: var(--text-muted); margin-bottom: 2.5rem;
+  }
+  .back:hover { color: var(--white); }
+  h1 {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.4rem); font-weight: 600;
+    line-height: 1.15; color: var(--white); margin-bottom: 2.5rem;
+    letter-spacing: -0.02em;
+  }
+  h2 {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: 1.15rem; font-weight: 600; color: var(--white);
+    margin-top: 2.5rem; margin-bottom: 0.75rem;
+  }
+  p { margin-bottom: 1rem; color: var(--text-muted); font-size: 0.95rem; }
+  .placeholder {
+    background: var(--orange-soft); border: 1px dashed var(--orange);
+    border-radius: 0.5rem; padding: 0.75rem 1rem; color: var(--orange);
+    font-size: 0.9rem; margin-bottom: 1rem;
+  }
+  .footer-legal {
+    margin-top: 4rem; padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.8rem; color: var(--text-muted);
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .footer-legal a { color: var(--text-muted); }
+  .footer-legal a:hover { color: var(--white); }
 </style>
 </head>
 <body>
@@ -40,12 +87,10 @@
   <h2>Angaben gem&auml;&szlig; &sect; 5 TMG</h2>
   <p>
     Dominik Preiss<br>
-    57 Consulting (Einzelunternehmen)
+    57Consulting GbR<br>
+    Marburger Str. 14<br>
+    57072 Siegen
   </p>
-  <div class="placeholder">
-    TODO: Stra&szlig;e, Hausnummer, PLZ, Ort hier eintragen.<br>
-    Beispiel: Musterstra&szlig;e 1, 57072 Siegen
-  </div>
 
   <h2>Kontakt</h2>
   <p>
@@ -56,27 +101,32 @@
   <h2>Umsatzsteuer-ID</h2>
   <div class="placeholder">
     TODO: Falls vorhanden, Umsatzsteuer-ID eintragen.<br>
-    Falls (noch) keine: "Kleinunternehmer gem&auml;&szlig; &sect; 19 UStG" oder entfernen.
+    Falls (noch) keine: &ldquo;Kleinunternehmer gem&auml;&szlig; &sect; 19 UStG&rdquo; oder entfernen.
   </div>
 
   <h2>Verantwortlich f&uuml;r den Inhalt gem&auml;&szlig; &sect; 18 Abs. 2 MStV</h2>
   <p>
     Dominik Preiss<br>
-    (Anschrift wie oben)
+    Marburger Str. 14, 57072 Siegen
   </p>
 
   <h2>Streitschlichtung</h2>
   <p>Die Europ&auml;ische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr/</a></p>
-  <p>Ich bin nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+  <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
 
   <h2>Haftung f&uuml;r Inhalte</h2>
-  <p>Als Diensteanbieter bin ich gem&auml;&szlig; &sect; 7 Abs. 1 TMG f&uuml;r eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach &sect;&sect; 8 bis 10 TMG bin ich als Diensteanbieter jedoch nicht verpflichtet, &uuml;bermittelte oder gespeicherte fremde Informationen zu &uuml;berwachen oder nach Umst&auml;nden zu forschen, die auf eine rechtswidrige T&auml;tigkeit hinweisen.</p>
+  <p>Als Diensteanbieter sind wir gem&auml;&szlig; &sect; 7 Abs. 1 TMG f&uuml;r eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach &sect;&sect; 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, &uuml;bermittelte oder gespeicherte fremde Informationen zu &uuml;berwachen oder nach Umst&auml;nden zu forschen, die auf eine rechtswidrige T&auml;tigkeit hinweisen.</p>
 
   <h2>Haftung f&uuml;r Links</h2>
-  <p>Diese Website enth&auml;lt Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss habe. Deshalb kann ich f&uuml;r diese fremden Inhalte auch keine Gew&auml;hr &uuml;bernehmen. F&uuml;r die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.</p>
+  <p>Diese Website enth&auml;lt Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb k&ouml;nnen wir f&uuml;r diese fremden Inhalte auch keine Gew&auml;hr &uuml;bernehmen. F&uuml;r die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.</p>
 
   <h2>Urheberrecht</h2>
   <p>Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielf&auml;ltigung, Bearbeitung, Verbreitung und jede Art der Verwertung au&szlig;erhalb der Grenzen des Urheberrechtes bed&uuml;rfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.</p>
+
+  <div class="footer-legal">
+    <span>57 Consulting</span>
+    <a href="/datenschutz.html">Datenschutz</a>
+  </div>
 </div>
 </body>
 </html>
