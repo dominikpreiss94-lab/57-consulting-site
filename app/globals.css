@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-bg: #0b0b0b;
+  --color-bg-card: #141414;
+  --color-bg-card-hover: #1a1a1a;
+  --color-surface: #1e1e1e;
+  --color-border: rgba(255,255,255,0.08);
+  --color-border-hover: rgba(255,255,255,0.15);
+  --color-text: #f0f0f0;
+  --color-text-muted: rgba(240,240,240,0.55);
+  --color-text-secondary: rgba(240,240,240,0.75);
+  --color-orange: #e8650a;
+  --color-orange-soft: rgba(232,101,10,0.12);
+  --color-orange-glow: rgba(232,101,10,0.06);
+  --color-white: #ffffff;
+
+  /* Fonts */
+  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+  --font-display: var(--font-space-grotesk), system-ui, sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: var(--color-orange-soft);
+  color: var(--color-white);
+}
