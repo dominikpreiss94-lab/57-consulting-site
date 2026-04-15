@@ -5,6 +5,7 @@ import { Card, CardIcon, CardTitle, CardBody, CardPrice } from "@/components/ui/
 import { StatCard } from "@/components/ui/stat-card";
 import { SectionHeader } from "@/components/ui/section-header";
 import { FeatureCard } from "@/components/ui/feature-card";
+import { ContactForm } from "@/components/contact-form";
 import { siteConfig } from "@/lib/site-config";
 
 export default function HomePage() {
@@ -306,26 +307,43 @@ export default function HomePage() {
 
       {/* ── Kontakt ── */}
       <section className="py-20" id="kontakt">
-        <div className="relative overflow-hidden rounded-xl border border-border bg-bg-card p-12">
-          <div className="absolute -bottom-16 -left-16 h-[300px] w-[300px] rounded-full bg-orange-glow blur-[100px]" />
-          <p className="relative text-[0.7rem] uppercase tracking-[0.3em] font-semibold text-orange">
-            Kontakt
-          </p>
-          <h2 className="relative mt-3 font-display text-[clamp(1.6rem,3vw,2.2rem)] leading-[1.2] text-white max-w-lg">
-            30 Minuten. Ihre Herausforderung. Unsere Einschätzung.
-          </h2>
-          <div className="relative mt-8 flex flex-wrap gap-4">
-            <Button href={`mailto:${siteConfig.email}`}>
-              {siteConfig.email}
-            </Button>
-            <Button
-              href={siteConfig.linkedinUrl}
-              variant="ghost"
-              target="_blank"
-              rel="noopener"
-            >
-              LinkedIn
-            </Button>
+        <div className="grid gap-10 lg:grid-cols-[1fr_1.3fr]">
+          {/* Left: Info */}
+          <div className="relative overflow-hidden rounded-xl border border-border bg-bg-card p-10">
+            <div className="absolute -bottom-16 -left-16 h-[300px] w-[300px] rounded-full bg-orange-glow blur-[100px]" />
+            <p className="relative text-[0.7rem] uppercase tracking-[0.3em] font-semibold text-orange">
+              Kontakt
+            </p>
+            <h2 className="relative mt-3 font-display text-[clamp(1.6rem,3vw,2.2rem)] leading-[1.2] text-white">
+              30 Minuten. Ihre Herausforderung. Unsere Einschätzung.
+            </h2>
+            <p className="relative mt-4 text-sm leading-7 text-text-muted">
+              Nutzen Sie das Formular oder schreiben Sie uns direkt.
+              Wir melden uns innerhalb von 24 Stunden.
+            </p>
+            <div className="relative mt-6 space-y-3">
+              <a
+                href={`mailto:${siteConfig.email}`}
+                className="flex items-center gap-3 text-sm text-text-secondary hover:text-orange transition-colors"
+              >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-4 w-4 shrink-0"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                {siteConfig.email}
+              </a>
+              <a
+                href={siteConfig.linkedinUrl}
+                target="_blank"
+                rel="noopener"
+                className="flex items-center gap-3 text-sm text-text-secondary hover:text-orange transition-colors"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4 shrink-0"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>
+                LinkedIn
+              </a>
+            </div>
+          </div>
+
+          {/* Right: Form */}
+          <div className="rounded-xl border border-border bg-bg-card p-10">
+            <ContactForm />
           </div>
         </div>
       </section>
