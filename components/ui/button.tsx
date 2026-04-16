@@ -9,7 +9,7 @@ const variants: Record<Variant, string> = {
   primary:
     "bg-orange text-white hover:bg-[#d45a08] hover:-translate-y-px",
   ghost:
-    "bg-transparent text-text-secondary border border-border hover:border-orange hover:text-white"
+    "bg-transparent text-text-secondary border border-border hover:border-orange hover:text-text"
 };
 
 type ButtonProps = {

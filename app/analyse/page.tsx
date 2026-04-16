@@ -102,7 +102,7 @@ export default function AnalysePage() {
         <p className="text-[0.7rem] uppercase tracking-[0.3em] font-semibold text-orange">
           KI-Problemanalyse
         </p>
-        <h1 className="mt-3 font-display text-[clamp(1.8rem,4vw,2.8rem)] leading-[1.1] tracking-tight text-white max-w-3xl">
+        <h1 className="mt-3 font-display text-[clamp(1.8rem,4vw,2.8rem)] leading-[1.1] tracking-tight text-text max-w-3xl">
           Beschreiben Sie Ihre Herausforderung – wir analysieren das Vorgehen.
         </h1>
         <p className="mt-3 text-text-muted max-w-xl">
@@ -250,7 +250,7 @@ export default function AnalysePage() {
                       <Button href="/#kontakt">Erstgespräch vereinbaren</Button>
                       <button
                         onClick={() => { setPhase("input"); setResult(""); }}
-                        className="cursor-pointer rounded-lg border border-border px-6 py-3 text-sm text-text-muted hover:text-white hover:border-border-hover transition-colors bg-transparent"
+                        className="cursor-pointer rounded-lg border border-border px-6 py-3 text-sm text-text-muted hover:text-text hover:border-border-hover transition-colors bg-transparent"
                       >
                         Neue Analyse
                       </button>

@@ -25,7 +25,7 @@ export function CardIcon({ children }: { children: ReactNode }) {
 
 export function CardTitle({ children }: { children: ReactNode }) {
   return (
-    <h3 className="mb-2.5 text-[1.05rem] font-semibold text-white">
+    <h3 className="mb-2.5 text-[1.05rem] font-semibold text-text">
       {children}
     </h3>
   );

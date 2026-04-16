@@ -20,7 +20,7 @@ export default function UseCasesPage() {
         <p className="text-[0.7rem] uppercase tracking-[0.3em] font-semibold text-orange">
           Use Cases
         </p>
-        <h1 className="mt-3 font-display text-[clamp(2rem,4.5vw,3.4rem)] leading-[1.1] tracking-tight text-white max-w-3xl">
+        <h1 className="mt-3 font-display text-[clamp(2rem,4.5vw,3.4rem)] leading-[1.1] tracking-tight text-text max-w-3xl">
           Von der Herausforderung zum messbaren Ergebnis.
         </h1>
         <p className="mt-4 text-lg leading-7 text-text-muted max-w-2xl">
@@ -51,7 +51,7 @@ export default function UseCasesPage() {
         {/* Active Use Case */}
         <div className="mb-8">
           <div className="flex items-baseline gap-4 mb-2">
-            <h2 className="font-display text-2xl font-semibold text-white">
+            <h2 className="font-display text-2xl font-semibold text-text">
               {active.title}
             </h2>
             <span className="rounded-md bg-orange/10 px-3 py-1 text-sm font-semibold text-orange">
@@ -69,7 +69,7 @@ export default function UseCasesPage() {
       <section className="py-12 border-t border-border">
         <div className="relative overflow-hidden rounded-xl border border-border bg-bg-card p-10">
           <div className="absolute -top-10 -right-10 h-[200px] w-[200px] rounded-full bg-orange-glow blur-[80px]" />
-          <h2 className="relative font-display text-xl text-white mb-2">
+          <h2 className="relative font-display text-xl text-text mb-2">
             Ähnliche Herausforderung?
           </h2>
           <p className="relative text-text-muted mb-6 max-w-lg">

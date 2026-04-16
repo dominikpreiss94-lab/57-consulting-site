@@ -28,13 +28,13 @@ export default async function AngebotPage({ params }: { params: Promise<{ slug: 
 
       {/* Hero */}
       <section className="py-16 pb-12 border-b border-border">
-        <a href="/#angebot" className="inline-flex items-center gap-1.5 text-sm text-text-muted hover:text-white transition-colors mb-6">
+        <a href="/#angebot" className="inline-flex items-center gap-1.5 text-sm text-text-muted hover:text-text transition-colors mb-6">
           ← Alle Formate
         </a>
         <p className="text-[0.7rem] uppercase tracking-[0.3em] font-semibold text-orange">
           Angebot
         </p>
-        <h1 className="mt-3 font-display text-[clamp(1.8rem,4vw,3rem)] leading-[1.1] tracking-tight text-white max-w-3xl">
+        <h1 className="mt-3 font-display text-[clamp(1.8rem,4vw,3rem)] leading-[1.1] tracking-tight text-text max-w-3xl">
           {angebot.title}
         </h1>
         <p className="mt-3 text-lg leading-7 text-text-muted max-w-2xl">
@@ -66,7 +66,7 @@ export default async function AngebotPage({ params }: { params: Promise<{ slug: 
               {angebot.description}
             </p>
 
-            <h2 className="font-display text-lg font-semibold text-white mb-4">Ablauf</h2>
+            <h2 className="font-display text-lg font-semibold text-text mb-4">Ablauf</h2>
             <ol className="space-y-3 mb-10">
               {angebot.agenda.map((step, i) => (
                 <li key={i} className="flex gap-3 text-sm leading-6">
@@ -78,7 +78,7 @@ export default async function AngebotPage({ params }: { params: Promise<{ slug: 
               ))}
             </ol>
 
-            <h2 className="font-display text-lg font-semibold text-white mb-4">Nächster Schritt</h2>
+            <h2 className="font-display text-lg font-semibold text-text mb-4">Nächster Schritt</h2>
             <p className="text-sm leading-7 text-text-muted">{angebot.nextStep}</p>
           </div>
 

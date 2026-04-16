@@ -22,14 +22,14 @@
     src: url(/fonts/space-grotesk-latin.woff2) format('woff2');
   }
   :root {
-    --bg: #0b0b0b;
-    --bg-card: #141414;
-    --border: rgba(255,255,255,0.08);
-    --text: #f0f0f0;
-    --text-muted: rgba(240,240,240,0.55);
-    --text-secondary: rgba(240,240,240,0.75);
+    --bg: #ffffff;
+    --bg-card: #f7f7f7;
+    --border: rgba(0,0,0,0.08);
+    --text: #1a1a1a;
+    --text-muted: rgba(26,26,26,0.55);
+    --text-secondary: rgba(26,26,26,0.75);
     --orange: #e8650a;
-    --orange-soft: rgba(232,101,10,0.12);
+    --orange-soft: rgba(232,101,10,0.08);
     --white: #ffffff;
   }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -42,25 +42,25 @@
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
   }
-  ::selection { background: var(--orange-soft); color: var(--white); }
+  ::selection { background: var(--orange-soft); color: var(--text); }
   a { color: var(--orange); text-decoration: none; transition: color 0.2s; }
-  a:hover { color: var(--white); }
+  a:hover { color: var(--text); }
   .wrap { max-width: 48rem; margin: 0 auto; padding: 3rem 1.5rem 4rem; }
   @media (min-width: 768px) { .wrap { padding: 3rem 2.5rem 4rem; } }
   .back {
     display: inline-flex; align-items: center; gap: 0.4rem;
     font-size: 0.85rem; color: var(--text-muted); margin-bottom: 2.5rem;
   }
-  .back:hover { color: var(--white); }
+  .back:hover { color: var(--text); }
   h1 {
     font-family: 'Space Grotesk', system-ui, sans-serif;
     font-size: clamp(1.8rem, 3.5vw, 2.4rem); font-weight: 600;
-    line-height: 1.15; color: var(--white); margin-bottom: 2.5rem;
+    line-height: 1.15; color: var(--text); margin-bottom: 2.5rem;
     letter-spacing: -0.02em;
   }
   h2 {
     font-family: 'Space Grotesk', system-ui, sans-serif;
-    font-size: 1.15rem; font-weight: 600; color: var(--white);
+    font-size: 1.15rem; font-weight: 600; color: var(--text);
     margin-top: 2.5rem; margin-bottom: 0.75rem;
   }
   h3 { font-size: 1rem; font-weight: 600; color: var(--text-secondary); margin-top: 1.5rem; margin-bottom: 0.5rem; }
@@ -77,7 +77,7 @@
     display: flex; justify-content: space-between; align-items: center;
   }
   .footer-legal a { color: var(--text-muted); }
-  .footer-legal a:hover { color: var(--white); }
+  .footer-legal a:hover { color: var(--text); }
 </style>
 </head>
 <body>
@@ -135,7 +135,7 @@
   <h3>LinkedIn</h3>
   <p>Auf dieser Website sind Links zu unserem LinkedIn-Profil eingebunden. Es werden keine Daten an LinkedIn &uuml;bermittelt, bis Sie aktiv auf den Link klicken und die Seite von LinkedIn besuchen. F&uuml;r die Datenverarbeitung durch LinkedIn ist LinkedIn (LinkedIn Ireland Unlimited Company) verantwortlich.</p>
 
-  <p style="margin-top: 3rem; font-size: 0.85rem; color: rgba(240,240,240,0.30);">Stand: April 2026</p>
+  <p style="margin-top: 3rem; font-size: 0.85rem; color: rgba(26,26,26,0.30);">Stand: April 2026</p>
 
   <div class="footer-legal">
     <span>57 Consulting</span>

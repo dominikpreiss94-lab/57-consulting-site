@@ -69,7 +69,7 @@ export function ContactForm() {
             <path d="M5 13l4 4L19 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </div>
-        <h3 className="font-display text-xl text-white mb-2">Nachricht erhalten.</h3>
+        <h3 className="font-display text-xl text-text mb-2">Nachricht erhalten.</h3>
         <p className="text-text-muted">Wir melden uns innerhalb von 24 Stunden bei Ihnen.</p>
       </div>
     );
@@ -222,7 +222,7 @@ export function ContactForm() {
       <p className="text-xs text-text-muted">
         Nur E-Mail und Herausforderung sind Pflichtfelder. Ihre Daten werden ausschließlich zur
         Bearbeitung Ihrer Anfrage verwendet.{" "}
-        <a href="/datenschutz.html" className="text-orange hover:text-white transition-colors">Datenschutz</a>
+        <a href="/datenschutz.html" className="text-orange hover:text-text transition-colors">Datenschutz</a>
       </p>
     </form>
   );

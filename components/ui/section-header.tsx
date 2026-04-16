@@ -12,7 +12,7 @@ export function SectionHeader({ label, title, children }: SectionHeaderProps) {
       <p className="text-[0.7rem] uppercase tracking-[0.3em] font-semibold text-orange">
         {label}
       </p>
-      <h2 className="mt-3 font-display text-[clamp(1.8rem,3.5vw,2.6rem)] leading-[1.15] tracking-tight text-white">
+      <h2 className="mt-3 font-display text-[clamp(1.8rem,3.5vw,2.6rem)] leading-[1.15] tracking-tight text-text">
         {title}
       </h2>
       {children && (

@@ -102,7 +102,7 @@ function PhaseCard({ phase, isOpen, onToggle }: { phase: Phase; isOpen: boolean;
       >
         {/* Header row */}
         <div className="flex flex-wrap items-baseline justify-between gap-3">
-          <h3 className="font-display text-lg font-semibold text-white">{phase.title}</h3>
+          <h3 className="font-display text-lg font-semibold text-text">{phase.title}</h3>
           <div className="flex items-center gap-4 text-sm">
             <span className="text-orange font-semibold">{phase.duration57}</span>
             {phase.durationClassic !== "–" && (

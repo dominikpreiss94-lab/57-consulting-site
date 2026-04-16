@@ -9,19 +9,19 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bg: "#0b0b0b",
-        "bg-card": "#141414",
-        "bg-card-hover": "#1a1a1a",
-        surface: "#1e1e1e",
-        border: "rgba(255,255,255,0.08)",
-        "border-hover": "rgba(255,255,255,0.15)",
-        text: "#f0f0f0",
-        "text-muted": "rgba(240,240,240,0.55)",
-        "text-secondary": "rgba(240,240,240,0.75)",
+        bg: "#ffffff",
+        "bg-card": "#f7f7f7",
+        "bg-card-hover": "#f0f0f0",
+        surface: "#f2f2f2",
+        border: "rgba(0,0,0,0.08)",
+        "border-hover": "rgba(0,0,0,0.15)",
+        text: "#1a1a1a",
+        "text-muted": "rgba(26,26,26,0.55)",
+        "text-secondary": "rgba(26,26,26,0.75)",
         orange: {
           DEFAULT: "#e8650a",
-          soft: "rgba(232,101,10,0.12)",
-          glow: "rgba(232,101,10,0.06)"
+          soft: "rgba(232,101,10,0.08)",
+          glow: "rgba(232,101,10,0.05)"
         },
         white: "#ffffff"
       },

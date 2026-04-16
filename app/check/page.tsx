@@ -144,7 +144,7 @@ function OptionButton({
           : "border-border bg-bg-card hover:border-border-hover hover:bg-bg-card-hover"
       }`}
     >
-      <p className={`text-sm font-semibold ${selected ? "text-orange" : "text-white"}`}>{label}</p>
+      <p className={`text-sm font-semibold ${selected ? "text-orange" : "text-text"}`}>{label}</p>
       {desc && <p className="mt-1 text-xs leading-5 text-text-muted">{desc}</p>}
     </button>
   );
@@ -189,7 +189,7 @@ export default function CheckPage() {
         <p className="text-[0.7rem] uppercase tracking-[0.3em] font-semibold text-orange">
           KI-Check
         </p>
-        <h1 className="mt-3 font-display text-[clamp(1.8rem,4vw,2.8rem)] leading-[1.1] tracking-tight text-white max-w-2xl">
+        <h1 className="mt-3 font-display text-[clamp(1.8rem,4vw,2.8rem)] leading-[1.1] tracking-tight text-text max-w-2xl">
           In 2 Minuten zum passenden Einstieg.
         </h1>
         <p className="mt-3 text-text-muted max-w-lg">
@@ -216,7 +216,7 @@ export default function CheckPage() {
           {/* Step 1: Branche */}
           {step === "branche" && (
             <div>
-              <h2 className="font-display text-lg text-white mb-6">In welcher Branche ist Ihr Unternehmen tätig?</h2>
+              <h2 className="font-display text-lg text-text mb-6">In welcher Branche ist Ihr Unternehmen tätig?</h2>
               <div className="grid gap-3 md:grid-cols-2">
                 {branchen.map((b) => (
                   <OptionButton
@@ -233,7 +233,7 @@ export default function CheckPage() {
           {/* Step 2: Größe */}
           {step === "groesse" && (
             <div>
-              <h2 className="font-display text-lg text-white mb-6">Wie groß ist Ihr Unternehmen?</h2>
+              <h2 className="font-display text-lg text-text mb-6">Wie groß ist Ihr Unternehmen?</h2>
               <div className="grid gap-3">
                 {groessen.map((g) => (
                   <OptionButton
@@ -250,7 +250,7 @@ export default function CheckPage() {
           {/* Step 3: KI-Status */}
           {step === "status" && (
             <div>
-              <h2 className="font-display text-lg text-white mb-6">Wie weit ist Ihr Unternehmen mit KI?</h2>
+              <h2 className="font-display text-lg text-text mb-6">Wie weit ist Ihr Unternehmen mit KI?</h2>
               <div className="grid gap-3">
                 {statusOptionen.map((s) => (
                   <OptionButton
@@ -268,7 +268,7 @@ export default function CheckPage() {
           {/* Step 4: Herausforderung */}
           {step === "herausforderung" && (
             <div>
-              <h2 className="font-display text-lg text-white mb-6">Was ist Ihre größte Herausforderung?</h2>
+              <h2 className="font-display text-lg text-text mb-6">Was ist Ihre größte Herausforderung?</h2>
               <div className="grid gap-3">
                 {herausforderungen.map((h) => (
                   <OptionButton
@@ -291,7 +291,7 @@ export default function CheckPage() {
                   {recommendation.level}
                 </span>
               </div>
-              <h2 className="font-display text-2xl text-white mb-4">
+              <h2 className="font-display text-2xl text-text mb-4">
                 {recommendation.title}
               </h2>
               <p className="text-base leading-7 text-text-secondary mb-8">
@@ -300,7 +300,7 @@ export default function CheckPage() {
 
               <div className="rounded-xl border border-border bg-bg-card p-6 mb-6">
                 <div className="flex flex-wrap items-baseline justify-between gap-3 mb-2">
-                  <h3 className="font-display text-lg font-semibold text-white">
+                  <h3 className="font-display text-lg font-semibold text-text">
                     {recommendation.format}
                   </h3>
                   <span className="text-sm font-semibold text-orange">{recommendation.price}</span>
@@ -316,7 +316,7 @@ export default function CheckPage() {
                   <p className="text-xs text-text-muted mb-2">Alternative</p>
                   <p className="text-sm text-text-secondary">
                     {recommendation.alternativ.reason}?{" "}
-                    <a href={recommendation.alternativ.link} className="text-orange hover:text-white transition-colors">
+                    <a href={recommendation.alternativ.link} className="text-orange hover:text-text transition-colors">
                       {recommendation.alternativ.label} →
                     </a>
                   </p>
@@ -328,7 +328,7 @@ export default function CheckPage() {
                 <p className="text-sm text-text-secondary">
                   Beschreiben Sie Ihre Herausforderung im Detail und erhalten Sie eine
                   KI-gestützte Einschätzung.{" "}
-                  <a href="/analyse" className="text-orange hover:text-white transition-colors">
+                  <a href="/analyse" className="text-orange hover:text-text transition-colors">
                     Zur KI-Problemanalyse →
                   </a>
                 </p>
@@ -342,7 +342,7 @@ export default function CheckPage() {
               {currentIndex > 0 && (
                 <button
                   onClick={back}
-                  className="cursor-pointer rounded-lg border border-border px-6 py-3 text-sm text-text-muted hover:text-white hover:border-border-hover transition-colors bg-transparent"
+                  className="cursor-pointer rounded-lg border border-border px-6 py-3 text-sm text-text-muted hover:text-text hover:border-border-hover transition-colors bg-transparent"
                 >
                   Zurück
                 </button>

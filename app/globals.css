@@ -1,19 +1,19 @@
 @import "tailwindcss";
 
 @theme {
-  /* Colors */
-  --color-bg: #0b0b0b;
-  --color-bg-card: #141414;
-  --color-bg-card-hover: #1a1a1a;
-  --color-surface: #1e1e1e;
-  --color-border: rgba(255,255,255,0.08);
-  --color-border-hover: rgba(255,255,255,0.15);
-  --color-text: #f0f0f0;
-  --color-text-muted: rgba(240,240,240,0.55);
-  --color-text-secondary: rgba(240,240,240,0.75);
+  /* Light Theme Colors */
+  --color-bg: #ffffff;
+  --color-bg-card: #f7f7f7;
+  --color-bg-card-hover: #f0f0f0;
+  --color-surface: #f2f2f2;
+  --color-border: rgba(0,0,0,0.08);
+  --color-border-hover: rgba(0,0,0,0.15);
+  --color-text: #1a1a1a;
+  --color-text-muted: rgba(26,26,26,0.55);
+  --color-text-secondary: rgba(26,26,26,0.75);
   --color-orange: #e8650a;
-  --color-orange-soft: rgba(232,101,10,0.12);
-  --color-orange-glow: rgba(232,101,10,0.06);
+  --color-orange-soft: rgba(232,101,10,0.08);
+  --color-orange-glow: rgba(232,101,10,0.05);
   --color-white: #ffffff;
 
   /* Fonts */
@@ -22,7 +22,7 @@
 }
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 html {
@@ -45,5 +45,5 @@ a {
 
 ::selection {
   background: var(--color-orange-soft);
-  color: var(--color-white);
+  color: var(--color-text);
 }
