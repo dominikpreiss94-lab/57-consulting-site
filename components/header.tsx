@@ -3,10 +3,10 @@
 import { useState } from "react";
 
 const navLinks = [
-  { href: "/#leistungen", label: "Leistungen" },
   { href: "/#angebot", label: "Angebot" },
   { href: "/use-cases", label: "Use Cases" },
   { href: "/methodik", label: "Vorgehen" },
+  { href: "/check", label: "KI-Check" },
   { href: "/#kontakt", label: "Kontakt" }
 ];
 

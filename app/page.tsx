@@ -23,8 +23,8 @@ export default function HomePage() {
           {siteConfig.description}
         </p>
         <div className="mt-10 flex flex-wrap gap-4">
-          <Button href="#kontakt">Erstgespräch vereinbaren</Button>
-          <Button href="#angebot" variant="ghost">Formate ansehen</Button>
+          <Button href="/analyse">Herausforderung analysieren</Button>
+          <Button href="#kontakt" variant="ghost">Erstgespräch vereinbaren</Button>
         </div>
       </section>
 
